@@ -9,9 +9,9 @@ boxes3 = []
 
 
 def checker(box):
-    if any(x for x in Counter(box).itervalues() if x == 2):
+    if any(x for x in Counter(box).values() if x == 2):
         boxes2.append(box)
-    if any(x for x in Counter(box).itervalues() if x == 3):
+    if any(x for x in Counter(box).values() if x == 3):
         boxes3.append(box)
 
 
@@ -45,7 +45,7 @@ def diff_count(a, b):
         print(a)
         print(b)
         print('ANSWER:')
-        print(''.join(x for x in b if x not in (set(a) ^ set(b))))
+        print(''.join(x for x, y in zip(a, b) if x == y))
 
 
 for b in boxes2:
