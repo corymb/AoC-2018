@@ -41,4 +41,5 @@ def is_discrete(cloth):
 
 for d in data:
     if is_discrete(d):
-        assert False, d['id']
+        print(d['id'])
+        break
